@@ -2,5 +2,8 @@
 
 hashicorp packer workshop project on AWS
 
+OS : amazon linux 2023
+
 packer version : 1.10.3
-lang : HCL2
+
+language : HCL2
