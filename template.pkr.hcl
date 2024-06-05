@@ -20,7 +20,7 @@ source "amazon-ebs" "aml3" {
   ami_name      = local.my_ami_name
   instance_type = local.instance_type
   region        = local.aws_region
-  source_ami    = "ami-0ca2e925753ca2fb4"
+  source_ami    = "ami-0c9921088121ad00b"
   ssh_pty       = true
   ssh_username  = local.ssh_username
   ssh_interface = "public_ip"
