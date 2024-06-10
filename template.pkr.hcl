@@ -19,7 +19,7 @@ locals {
 data "amazon-ami" "amazon-linux-2" {
   region = "us-east-2"
   filters = {
-    name                = "aws/service/ami-amazon-linux-latest/amzn2-ami*"
+    name                = "*amzn2-ami-kernel*"
     root-device-type    = "ebs"
     virtualization-type = "hvm"
   }
@@ -31,7 +31,6 @@ source "amazon-ebs" "aml2" {
   ami_name      = local.my_ami_name
   instance_type = local.instance_type
   region        = local.aws_region
-  #source_ami    = "ami-0c9921088121ad00b"
   source_ami    = data.amazon-ami.amazon-linux-2.id
   ssh_pty       = true
   ssh_username  = local.ssh_username
