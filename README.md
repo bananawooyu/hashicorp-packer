@@ -85,3 +85,31 @@ hashicorp packer workshop project on AWS
         ]
       }
     }
+
+--------------------
+
+#### 보안 스크립트 
+
+    <security_script.sh>
+    
+    sudo yum update -y
+    sudo yum install -y aws-cli
+    sudo sed -i 's/^PASS_MAX_DAYS\\s\\+[0-9]\\+/PASS_MAX_DAYS   90/g' /etc/login.defs
+    sudo sed -i 's/^PASS_MIN_LEN\\s\\+[0-9]\\+/PASS_MIN_LEN   8/g' /etc/login.defs
+    sudo sed -i 's/#\\s\\+minlen\\s\\+=\\s\\+[0-9]\\+/minlen = 8/g' /etc/security/pwquality.conf
+    sudo chmod 4750 /bin/su
+    sudo chown root:wheel /bin/su
+    sudo sh -c 'echo \"\" > /etc/motd'
+    sudo sed -i 's/^#Banner\\s\\+none/Banner none/g' /etc/ssh/sshd_config
+    sudo service sshd restart
+    
+    sleep 5
+    
+    echo "###################################"
+    
+    echo "###  compelete Security Script  ###"
+    
+    echo "###################################"
+    
+    echo "### Result of Security Script" > result.txt
+
