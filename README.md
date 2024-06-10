@@ -113,3 +113,7 @@ hashicorp packer workshop project on AWS
     
     echo "### Result of Security Script" > result.txt
 
+### 이미지 생성 화면
+![packer 1](https://github.com/bananawooyu/terraform/assets/57030333/1c73df0c-eb8c-4d1f-8182-0f62200320cd)
+![packer 2](https://github.com/bananawooyu/terraform/assets/57030333/1e98bcfa-bef7-4934-9e1d-1218669b5400)
+
