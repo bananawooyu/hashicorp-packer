@@ -88,6 +88,12 @@ hashicorp packer workshop project on AWS
 
 --------------------
 
+#### packer plugins install
+
+    packer init -upgrade template.pkr.hcl
+
+--------------------
+
 #### 보안 스크립트 
 
     <security_script.sh>
