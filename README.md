@@ -14,9 +14,9 @@ hashicorp packer workshop project on AWS
 
 ※  AML2023은 User-data 미지원으로 인해 AML2 사용
 
-    $ sudo yum install -y yum-utils
-    $ sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
-    $ sudo yum -y install packer
+    sudo yum install -y yum-utils
+    sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+    sudo yum -y install packer
 
 #### packer 템플릿 작성
 
